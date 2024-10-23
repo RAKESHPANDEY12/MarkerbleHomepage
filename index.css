@@ -1,0 +1,134 @@
+.personal-invitations-button {
+    border: 1px solid #36b9fd;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.tt-hint {
+    visibility: hidden;
+}
+
+.tt-dropdown-menu {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.nav>li {
+    margin-top: 0 !important;
+    padding: 15px 0;
+}
+
+.user-online {
+    width: auto;
+}
+
+.disabled-link {
+    cursor: not-allowed;
+}
+
+.header-button {
+    text-align: center;
+    margin: 6px 7px 7px !important;
+    padding: 0 10px !important;
+    border-radius: 10px;
+    min-width: 120px;
+    font-size: 16px;
+    font-weight: bold !important;
+    min-height: 38px;
+    line-height: 36px !important;
+}
+
+.user-online .navbar-nav li.notification_body a {
+    padding: 0 !important;
+}
+
+.navbar-new {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-ul,
+.right-ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.left-ul {
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.left-ul>li,
+.right-ul>li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.right-ul>li>div,
+.right-ul>li>a {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-ul>li>a,
+.right-ul>li>a {
+    color: black;
+}
+
+.right-ul>li:nth-child(-n+4) {
+    margin: 0 5px;
+}
+
+@media (max-width: 800px) {
+    .navbar-menu {
+        flex-direction: column;
+    }
+
+    .search-n-apps {
+        width: 310px;
+    }
+}
+
+#unread-count:not(:empty) {
+    background-color: #2d3e58;
+    color: white;
+    border-radius: 20%;
+    padding: 0 0.4rem;
+}
+
+.padding-left {
+    margin-left: 310px !important;
+}
+
+#main_body_div {
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+
+.tt-dataset-beneficiaries,
+.tt-dataset-projects,
+.tt-dataset-charities,
+.tt-dataset-users {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+}
+
+.tt-dropdown-menu {
+    max-height: 200px;
+    height: auto !important;
+}
+
+.tt-suggestions {
+    width: 100% !important;
+}

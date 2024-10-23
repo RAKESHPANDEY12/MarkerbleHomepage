@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<script defer src="https://apis.google.com/js/api.js" onload="gapiLoadedForClient()"></script>
+	<script defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+	<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+	<script src="index.js">
+	</script>
+	<link rel="stylesheet" href="index.css">
+	<script src="https://js-de.sentry-cdn.com/2dcecf36fe92e6c1a508a5fd6a0d0ef5.min.js" crossorigin="anonymous"></script>
+	<script data-pw-auth="d0f2a7cefb030c28faba0de3c665510f" id="profitwell-js"></script>
+	<noscript>
+		<img height='1' src='https://www.facebook.com/tr?id=194870494178433&amp;ev=PageView&amp;noscript=1'
+			style='display:none' width='1'>
+	</noscript>
+
+	<script src="https://www.googletagmanager.com/gtag/js?id=G-5TFXZGWXN6" async="async"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" media="all" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" media="all"
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" media="screen" href="https://vjs.zencdn.net/4.9/video-js.css" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<link rel="stylesheet" media="screen"
+		href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.8/select2.min.js"></script>
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.8/select2.min.css" />
+	<link rel="stylesheet" media="all"
+		href="https://d3p03xrqe2ja84.cloudfront.net/assets/new_theme-eda4f4077caa40d82059ced06b1b6372b6d5903deca366819edbef920a36c637.css" />
+	<script
+		src="https://d3p03xrqe2ja84.cloudfront.net/assets/shared-70b27ad6d7b816093e224b97ea0ca3fc35c7138f3fb83868577cdd45da7ccf7a.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyD-IRPj3Rxf8-PMEFjPGD-gSzJtAbDoCo8"></script>
+	<script src="https://vjs.zencdn.net/4.9/video.js" async="async"></script>
+	<script
+		src="https://d3p03xrqe2ja84.cloudfront.net/assets/application-f0317ed3a201b92b9eb9ac8a94d52c6f8b0a20553b50a2e2c192a515503e9621.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.2/base64.min.js"></script>
+	<script
+		src="https://d3p03xrqe2ja84.cloudfront.net/assets/common-bundle-f55e70eb7e362e95eea1034b8a01a1b56ed22e28c1afce5b8697abe321a99782.js"></script>
+	<script
+		src="https://d3p03xrqe2ja84.cloudfront.net/assets/home-bundle-13cd51e7486885068f65257ce1c5fbbf49b3d19556d3cbbb821a0108aed6f61c.js"></script>
+	<script
+		src="https://d3p03xrqe2ja84.cloudfront.net/assets/labels-bundle-293921a710253f07f92adffbabaffd037a983e282b9f31d522381318f237b296.js"></script>
+	<script
+		src="https://d3p03xrqe2ja84.cloudfront.net/assets/tasks-bundle-edeb8d79f8185b15bf9df68592197928fb12ff7f1b6bcd8080947f79da600f74.js"></script>
+	<script
+		src="https://d3p03xrqe2ja84.cloudfront.net/assets/metrics-bundle-2084cd5c7c95a8bc5783f70ecd37c8967dd18ce7ccd3ce764d8d2e702d0573cf.js"></script>
+	<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+	<link rel="shortcut icon" type="image/x-icon"
+		href="https://d3p03xrqe2ja84.cloudfront.net/assets/favicon-7b50e42dd58095aeafae41d71c648cea6cac2a060b1f00ad6d6b3a63130b61b7.ico" />
+	<title>Makerble</title>
+	<meta name="description" content="Makerble is a CRM platform">
+	<meta name="url" content="https://www.makerble.com/my-home">
+	<meta name="csrf-param" content="authenticity_token" />
+	<meta name="csrf-token"
+		content="ySXt9xRNrwc4guUfHHpWqbEm9ds4e+euBDhFipvvYj5RVXeo9Ti5uD2exaVlPA12WYg+zVeGHPp2uHDiH8irFw==" />
+</head>
+
+<body style="font-family: Quicksand;background-color: #EAEDF1;">
+	<div data-date-format="europian" data-time-format="military" id="userPreference"></div>
+	<div id="main_header_div" style="position: sticky; top: 0; z-index: 10;">
+		<script
+			src="https://d3p03xrqe2ja84.cloudfront.net/assets/header-bundle-f05a46ac96a711ef9553091fd062e4c03158551d9c0edaa734c2856d4d75fcbc.js"></script>
+		<script data-base-url="https://jsd-widget.atlassian.com" data-jsd-embedded
+			data-key="0d78a53c-d196-4340-945c-7f9bdcb633e8"
+			src="https://jsd-widget.atlassian.com/assets/embed.js"></script>
+		<div class="row main-header-container"
+			style="width: 100%; height: auto; z-index: 10; border-bottom: 1px solid #C5C5C5; background-color: #fff; margin: 0;">
+			<div class="navbar-header" style="display:flex; align-items: center; padding-top: 10px;">
+				<div id="navbar-on-small-screen" style="box-sizing: border-box;">
+
+					<span style="float: left!important;">
+						<a href="/"><img style="width: 31px; height: 31px;"
+								src="https://d3p03xrqe2ja84.cloudfront.net/assets/sprites/logos/makerble-mini-logo-transparent-2e543d506b626dfda97d5ae54c54d174d345de3cfc9ec3105c6124e90c018667.png" />
+							<small style="display:block;">Home</small>
+						</a></span>
+
+					<div class="navbar-menu"
+						style="margin: 0; padding: 0; display: flex; flex-direction: row-reverse; justify-content: flex-start; flex-wrap: wrap; box-sizing: border-box;">
+						<div style="display: flex; flex-direction: row-reverse; gap: 10px;">
+							<span>
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									<div class="glyphicon glyphicon-list" style="font-size: 28px;"></div>
+									<small style="display:block;">More</small>
+								</a>
+								<ul class="dropdown-menu custom_dropdown"
+									style="float:right; position:relative!important; margin-top:6px;">
+									<li><a href="/library?tab_name=metrics">Library</a></li>
+									<li>
+										<a data-skip-ajax-loading="true" href="https://about.makerble.com"
+											target="_blank">About us</a>
+									</li>
+									<li><a href="#">Settings</a></li>
+									<li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log out</a></li>
+									<li>
+										<a data-skip-ajax-loading="true"
+											href="https://makerble.atlassian.net/wiki/spaces/MCPD/overview"
+											target="_blank">Help</a>
+									</li>
+									<li>
+										<a data-skip-ajax-loading="true"
+											href="https://makerble.atlassian.net/servicedesk/customer/portal/1"
+											target="_blank">Request Support</a>
+									</li>
+								</ul>
+							</span>
+
+
+							<span>
+								<div class="glyphicon glyphicon-star-empty" onclick="alert('Already Upgraded')"
+									style="font-size: 28px; color: #32CD32;"></div>
+								<small onclick="alert('Already Upgraded');" style="display:block;">Upgrade</small>
+							</span>
+
+							<span>
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									<div class="glyphicon glyphicon-plus"
+										style="font-size: 27px; padding: 1px 0 0 2px; margin-bottom: 0; width: 30px; height: 30px; border-radius: 5px; color: white; background-color: #f92915;">
+									</div>
+									<small style="display:block;">Create</small>
+								</a>
+								<ul class="dropdown-menu custom_dropdown"
+									style="position:relative!important; margin-top:6px;">
+									<li class="dropdown-submenu"><a href="/progress_boards/new">Progress Board</a></li>
+									<li><a href="/tips/new">Idea</a></li>
+									<li><a href="/record_importer/new">Import</a></li>
+									<li><a href="/alert_triggers/new">Automation</a></li>
+									<li><a href="/collections/new">Collection</a></li>
+									<li><a href="/story_categories/new">Survey</a></li>
+								</ul>
+							</span>
+
+							<span>
+								<a href="#"><img style="width: 32px; height:32px; border-radius:5px;"
+										src="https://d18yxmdfdhwc9t.cloudfront.net/production/storage/users/6878/avatars/square/data?1729702589" />
+									<small style="display:block;">Me</small>
+								</a></span>
+
+							<span>
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									<img style="width: 32px; height: 32px;"
+										src="https://d3p03xrqe2ja84.cloudfront.net/assets/bell-25be87d898a0b1f923f47c44b6a54c25c90389d1584a246bf5a89d41815ddb83.png" />
+									<small style="display:block;">
+										0
+									</small>
+								</a>
+								<ul class="dropdown-menu" id="notification_list"
+									style="max-width: 400px;position:absolute;margin-left:auto;margin-right:auto;left:0;right:0;top:72px;">
+									<li>
+										<div class="btn" style="float: left">
+											<a href="#" style="display: inline-block;padding:0px">
+												Manage settings
+											</a>
+										</div>
+									</li>
+									<br>
+									<br>
+									<div class="notificationList" style="max-height:150px;overflow-y:scroll;">
+									</div>
+								</ul>
+							</span>
+
+							<span>
+								<a href="/mailbox/inbox"><img style="width: 32px; height:auto; padding: 4px 0"
+										src="https://d3p03xrqe2ja84.cloudfront.net/assets/message-fc4570557e6b3e2efca9ad03fa405aea6b75b04555b1be6ed42dd28a5223b671.png" />
+									<small style="display:block;">Message</small>
+								</a></span>
+
+						</div>
+
+						<div class="search-n-apps"
+							style="width: 290px; display: flex; flex-direction: row; justify-content: space-between; gap: 10px; box-sizing: border-box;">
+							<span>
+								<input autocomplete="off" class="typeahead form-control" id="global-search-field"
+									placeholder="Search for contacts and projects" style="width: 240px; height:auto; "
+									type="text">
+							</span>
+							<span>
+								<span class="dropdown-toggle" data-toggle="dropdown" href="#">
+									<img style="width: 30px; height: auto;"
+										src="https://d3p03xrqe2ja84.cloudfront.net/assets/desk-lamp-aa372ad0b60da2de6ddd8408a25c4bb7c2f4321c7e2a541e00f820b76cfaa4e9.png" />
+									<small style="display:block;" title="My Collection">Apps</small>
+								</span>
+								<ul class="dropdown-menu custom_dropdown" style="position: relative; top: 5px;">
+									<li><a class="nav-bar-btn" href="/alert_triggers">My Automations</a></li>
+									<li><a href="/tasks">My Tasks</a></li>
+									<li><a href="/my_projects">My Projects</a></li>
+									<li><a href="/story_categories">My Surveys</a></li>
+									<li><a href="/library?tab_name=metrics">My Metrics</a></li>
+									<li><a href="/my/templates">My Strategies</a></li>
+									<li><a href="/people">My People</a></li>
+									<li><a href="/maps">My Maps</a></li>
+									<li onclick="samePageAnchor('.tips');"><a href="/library?tab_name=tips">My Ideas</a>
+									</li>
+									<li onclick="samePageAnchor('.collections');"><a
+											href="/library?tab_name=collections">My Collections</a></li>
+								</ul>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navbar-new">
+				<ul class="left-ul">
+					<span id="logo-container"
+						style="display: flex; align-items:center; justify-content:space-around; width: 110px; padding-right: 10px;">
+						<a class="navbar-brand logo"
+							style="width: 100px; display: flex; align-items:center; justify-content:center;"
+							href="/"><img style="width: 60px; padding: 10px;"
+								src="https://d3p03xrqe2ja84.cloudfront.net/assets/sprites/logos/makerble-mini-logo-transparent-2e543d506b626dfda97d5ae54c54d174d345de3cfc9ec3105c6124e90c018667.png" />
+							<p class="small-text text-colour-primary" style="display: none;">
+								Change The World Faster
+							</p>
+						</a>
+					</span>
+					<li class="dropdown vertical-divider pointer main-nav-item" id="shortcut_menu"
+						style="width: 100px;font-weight: bold;margin-left:120px">
+						<a href="javascript:void(0)">My Apps
+							<span class="fa fa-caret-down"></span>
+						</a>
+						<div id="my-app-menu-loader" style="display: none;margin-top:-19px">
+							<i class="fa fa-spinner fa-spin"></i>
+						</div>
+					</li>
+					<li class="vertical-divider main-nav-item" style="width: 100px;font-weight: bold;">
+						<a href="/">Home</a>
+					</li>
+					<li class="dropdown vertical-divider"
+						style="padding-left: 1rem; padding-right: 0.5rem; flex-grow: 1; max-width: 300px;">
+						<input autocomplete="off" class="typeahead form-control" id="global-search-field"
+							placeholder="Search for contacts and projects" style="width: 100%;height:auto;height:auto;"
+							type="text">
+					</li>
+				</ul>
+				<ul class="right-ul">
+
+
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							<span class="nav-messages pull-right" id="notification_count"
+								style="color: white;border-radius: 6px;">0</span>
+							<img style="width: 20px;"
+								src="https://d3p03xrqe2ja84.cloudfront.net/assets/bell-25be87d898a0b1f923f47c44b6a54c25c90389d1584a246bf5a89d41815ddb83.png" />
+						</a>
+						<ul class="dropdown-menu" id="notification_list" style="min-width: 300px;">
+							<li>
+								<div class="btn" style="float: left">
+									<a href="#" style="display: inline-block;padding:0px">
+										Manage settings
+									</a>
+								</div>
+							</li>
+							<br>
+							<br>
+							<div class="notificationList" style="max-height:150px;overflow-y:scroll;">
+							</div>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="/mailbox/inbox"><span class="label nav-messages pull-right">0</span>
+							<img style="height: 16px;width: 20px;"
+								src="https://d3p03xrqe2ja84.cloudfront.net/assets/message-fc4570557e6b3e2efca9ad03fa405aea6b75b04555b1be6ed42dd28a5223b671.png" />
+						</a>
+					</li>
+					<li class="dropdown" id="newsfeed-widget" onclick="updateNewsfeedCount()"
+						onload="updateNewsfeedCount()" style="cursor:pointer">
+						<img style="height: 16px;width: 20px; border-radius:5px;" id="newsfeed-icon"
+							src="https://d3p03xrqe2ja84.cloudfront.net/assets/lightningbolt-9255c71e12d08558f086a7089936d205621d6af6d4384d7d107cda823b105a07.png" />
+						<span id="unread-count"></span>
+					</li>
+					<li class="dropdown">
+						<a style="padding: 5px 20px 0px 13px;font-weight: bold;" href="#"><img
+								style="width: 32px; height:32px; border-radius:5px;"
+								src="https://images.unsplash.com/photo-1580130379624-3a069adbffc5?q=80&w=1452&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+							Someone
+						</a>
+					</li>
+					<li class="vertical-divider">
+						<a class="dropdown-toggle header-button btn makerble-btn-header" data-toggle="dropdown" href="#"
+							style="top: 1px;margin-left:25px;text-align: center;font-weight: bold;">
+							<div class="glyphicon glyphicon-plus" style="top: 0;"></div>
+							Create
+						</a>
+						<ul class="dropdown-menu custom_dropdown" id="navigation_create_menu"
+							style="font-size:larger; left:70vw;">
+							<li><a href="/tips/new">Idea</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle btn btn-default header-button" data-toggle="dropdown" href="#"
+							style="font-weight: bold; border-color: #80c952;">
+							<div class="glyphicon glyphicon-th-list"></div>
+							More
+						</a>
+						<ul class="dropdown-menu custom_dropdown" style="left: -30px;">
+							<li>
+								<a data-skip-ajax-loading="true" href="https://about.makerble.com" target="_blank">About
+									us</a>
+							</li>
+							<li><a href="#">Settings</a></li>
+							<li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log out</a></li>
+							<li>
+								<a data-skip-ajax-loading="true"
+									href="https://makerble.atlassian.net/wiki/spaces/MCPD/overview"
+									target="_blank">Help</a>
+							</li>
+							<li>
+								<a data-skip-ajax-loading="true"
+									href="https://makerble.atlassian.net/servicedesk/customer/portal/1"
+									target="_blank">Request Support</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="/personal-invitations"><img alt="gift box icon" height="40" width="40"
+								class="personal-invitations-button"
+								src="https://d3p03xrqe2ja84.cloudfront.net/assets/gift-box-a0897861fcfb264654b1945606ed3ffd4b3741d014a4fe2392133fba81d75632.png" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row horizontal-nav-bar-container" style="margin: 0; background:#EAEDF1; display: none;"></div>
+		<script>
+			$(function () {
+
+
+				$("#shortcut_menu").click(function () {
+					if ($(".horizontal-nav-bar-container.loaded").length === 0) {
+						loadHorizontalNavigationTab();
+					}
+
+					slideUpSlideDownElement($(".horizontal-nav-bar-container"), 100);
+					$("#shortcut_menu").find(".fa-caret-down").toggleClass("flip");
+					if ($("#shortcut_menu").find(".fa-caret-down").hasClass("flip")) {
+						$('#side-bar-container-expanded').addClass('side-bar-menu-down')
+					} else {
+						$('#side-bar-container-expanded').removeClass('side-bar-menu-down')
+					}
+				});
+
+				$(".notificationList a").click(function () {
+					notification_id = $(this).parent().attr("data-notification-id")
+					$.ajax({
+						url: "/notifications/" + notification_id,
+						method: "get",
+						success: function (data, response) {
+						},
+						error: function (e) {
+						}
+					})
+				})
+			});
+		</script>
+		<script>
+			$(document).ready(function () {
+
+				function responsive() {
+					if ($('#navbar-on-small-screen').css('display') == 'none') {
+						$('.navbar-new').css('display', "flex");
+					} else {
+						$('.navbar-new').css('display', "none");
+					}
+				}
+				$(window).resize(function () {
+					responsive();
+				});
+
+				responsive();
+
+
+			});
+		</script>
+	</div>
+	<div class="container-fluid content-begin" style="margin-top: 0;padding: 0 30px;width:auto;">
+		<div id="system_message">
+
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<img style="display:block;" id="main_body_loader" class="center-block"
+					src="https://d3p03xrqe2ja84.cloudfront.net/assets/ajax-loader-0e74227ef57fb50cd37b1856b330ecf51f8563c4e5d56506f8d796d64a02c938.gif" />
+			</div>
+		</div>
+		<div class="row" style="display: flex;background-color:#EAEDF1">
+			<div data-url="/widget/sidebar_menu" id="side_navigation"></div>
+			<div id="main_body_div">
+				<br>
+				<br>
+			</div>
+		</div>
+	</div>
+	<div id="main_footer_div">
+		<div class="container-fluid body-prop"
+			style="position: relative;background: white; margin: 0; padding: 0 100px;">
+			<div class="row"></div>
+			<footer>
+				<div class="sprites-line"></div>
+				<div class="sprites-m-logo"></div>
+				<div class="space-sep20"></div>
+				<div class="row footer-prop">
+					<div class="col-xs-12 col-sm-8 col-md-8">
+						<div class="row">
+							<div class="hidden-xs col-sm-3 col-md-3">
+								<p>
+									<a href="/"><img class="img-responsive"
+											src="https://d3p03xrqe2ja84.cloudfront.net/assets/sprites/logos/makerble-small-logo-b3ad49d24c0988fc1f040e3abf19b383b897c2b49220534e1782682d26cf208e.png" />
+									</a>
+								</p>
+							</div>
+							<div class="hidden-xs col-sm-3 col-md-3">
+								<h4 class="rh" id="impact">Organisations</h4>
+							</div>
+							<div class="hidden-xs col-sm-3 col-md-3">
+								<h4 class="rh" id="impact">Your Account</h4>
+							</div>
+							<div class="hidden-xs col-sm-3 col-md-3">
+								<h4 class="rh" id="impact">Explore</h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-11 col-sm-3 col-md-3">
+								<div class="row">
+									<div class="visible-xs-inline col-xs-12">
+										<p>
+											<a href="/"><img class="img-responsive"
+													src="https://d3p03xrqe2ja84.cloudfront.net/assets/sprites/logos/makerble-small-logo-b3ad49d24c0988fc1f040e3abf19b383b897c2b49220534e1782682d26cf208e.png" />
+											</a>
+										</p>
+									</div>
+								</div>
+								<p>
+									<a data-skip-ajax-loading="true" href="https://about.makerble.com"
+										target="_blank">About us</a>
+								</p>
+								<p><a href="/terms-and-conditions">Terms &amp; Conditions</a></p>
+								<p><a href="/privacy-and-cookies">Privacy &amp; Cookies</a></p>
+							</div>
+							<div class="col-xs-12 col-sm-3 col-md-3">
+								<div class="row">
+									<div class="visible-xs-inline col-xs-12">
+										<h4 class="rh" id="impact">Organisations</h4>
+									</div>
+								</div>
+
+								<p><a href="/charity-sign-up">Discover the Marketplace</a></p>
+								<p><a href="/charity_registrations/new">Create Organisation Account</a></p>
+							</div>
+							<div class="col-xs-12 col-sm-3 col-md-3">
+								<div class="row">
+									<div class="visible-xs-inline col-xs-12">
+										<h4 class="rh" id="impact">Your Account</h4>
+									</div>
+								</div>
+
+								<p><a href="/library?tab_name=metrics">Library</a></p>
+								<p><a href="#">Profile</a></p>
+								<p><a href="/my_projects">Projects</a></p>
+
+								<a data-skip-ajax-loading="true"
+									href="https://makerble.atlassian.net/wiki/spaces/MCPD/overview"
+									target="_self">Help</a>
+							</div>
+							<div class="col-xs-12 col-sm-3 col-md-3">
+								<div class="row">
+									<div class="visible-xs-inline col-xs-12">
+										<h4 class="rh" id="impact">Explore</h4>
+									</div>
+								</div>
+
+								<p><a href="/metrics">Metrics</a></p>
+								<p><a href="/discover/networks">Networks</a></p>
+								<p><a href="/templates">Strategies</a></p>
+								<p><a href="/projects">Projects</a></p>
+								<p><a href="/studies">Studies</a></p>
+								<p><a href="/explore/surveys">Surveys</a></p>
+								<p><a href="/tips">Ideas</a></p>
+								<p><a href="/vouchers">Vouchers</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<h4 class="rh" id="impact">Follow the Makerble Story</h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2 small-gutters">
+								<a data-skip-ajax-loading="true" href="https://www.linkedin.com/company/makerble"
+									target="_blank">
+									<img class="img-responsive img-center" style="width:50px;height:50px;"
+										src="https://d3p03xrqe2ja84.cloudfront.net/assets/Linkedin_circle-d456a4787224a5d472637ea5b7d030e481cd0e56e660c96c001dfc739d148df9.png" />
+								</a>
+							</div>
+							<div class="col-xs-2 col-sm-2 col-md-2 small-gutters">
+								<a data-skip-ajax-loading="true" href="https://www.youtube.com/user/makerble"
+									target="_blank">
+									<img class="img-responsive img-center"
+										src="https://d3p03xrqe2ja84.cloudfront.net/assets/sprites/social/footer/footer-youtube-a0e116c8854ef7296345fc05c705d7efbe98d88dcf383d38a61e6405ee2ee2bd.png" />
+								</a>
+							</div>
+							<div class="col-xs-2 col-sm-2 col-md-2 small-gutters">
+								<a data-skip-ajax-loading="true" href="https://instagram.com/makerble" target="_blank">
+									<img class="img-responsive img-center"
+										src="https://d3p03xrqe2ja84.cloudfront.net/assets/sprites/social/footer/footer-instagram-c3047871ccba63643bb5f5e216bdf4a5a9a17a5ff3f400f09ae49bc83d5c5ac1.png" />
+								</a>
+							</div>
+							<div class="col-xs-2 col-sm-2 col-md-2 small-gutters">
+								<a data-skip-ajax-loading="true" href="https://twitter.com/makerble" target="_blank">
+									<img class="img-responsive img-center"
+										src="https://d3p03xrqe2ja84.cloudfront.net/assets/sprites/social/footer/footer-twitter-e5575bfa4d2d7a9cce598527142863553fb9e3a64a78af10d62fadbd938ca99d.png" />
+								</a>
+							</div>
+							<div class="col-xs-2 col-sm-2 col-md-2 small-gutters">
+								<a data-skip-ajax-loading="true" href="https://www.facebook.com/Makerble"
+									target="_blank">
+									<img class="img-responsive img-center"
+										src="https://d3p03xrqe2ja84.cloudfront.net/assets/sprites/social/footer/footer-facebook-dbc4648eb7a0b22039eb9ff0c42446501c00886d60f8dd60060a37adfd36d5fc.png" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="space-sep20"></div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12">
+						Contact Us:
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-2">
+						<p>
+						<div class="fa fa-envelope-o"></div>
+						<a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+							data-cfemail="d9bab6b7adb8baad99b4b8b2bcabbbb5bcf7bab6b4">[email&#160;protected]</a>
+						</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-2">
+						<p>
+						<div class="fa fa-phone"></div>
+						8956672562
+						</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 copyright-prop">
+						© Makerble 2024
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div class="modal fade" id="termsModal" role="dialog" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button aria-label="Close" class="close" data-dismiss="modal" style="float: right;"
+							type="button">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title" style="color: black;">Terms & Conditions for Makerble Impact Tracker
+						</h4>
+					</div>
+					<div class="modal-body">
+						<iframe height="500px"
+							src="https://docs.google.com/document/d/e/2PACX-1vQgzlgtDZ8QnsdwKBIiA3EZPr4f209vFcR5LggVg-ql16-QDb0Q89BnMxE4tQPi2m5i2q9DsMpmV0lL/pub?embedded=true"
+							width="100%"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<script type="text/template" id="image-preview-template">
+  <img class="image-preview" src="<%%- src %>" title="<%%= title %>" width="100px" height="100px">
+</script>
+	<div class="general-modal-container" style="margin: 0; padding: 0;"></div>
+	<script defer
+		src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+		integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+		data-cf-beacon='{"rayId":"8d735b88de4466c8","version":"2024.10.3","r":1,"token":"f1dafb7ea8af45f187c8cbe905af1024","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}'
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
